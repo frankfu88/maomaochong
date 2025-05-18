@@ -165,15 +165,16 @@ export default function Home() {
 
         {/* 🔹 Google 地圖嵌入 */}
         <div className="w-full flex justify-center mt-8">
-        <iframe
-          title="Google Maps - 毛貓寵動物醫院"
-          className="w-full max-w-[1100px] h-[450px] rounded-lg shadow-lg border-0"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.638898382683!2d120.64703819999998!3d24.1493164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693dac93728f7b%3A0x977f2d830f2c0c78!2z5q-b6LKT5a-15YuV54mp6Yar6Zmi!5e0!3m2!1szh-TW!2stw!4v1747535549187!5m2!1szh-TW!2stw"
-          allowFullScreen
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-        />
-      </div>
+          <iframe
+            title="Google Maps - 文志動物醫院"
+            className="w-full max-w-[1100px] h-[450px] rounded-lg shadow-lg border-0"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.638898382683!2d120.64703819999998!3d24.1493164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693dac93728f7b%3A0x977f2d830f2c0c78!2z5q-b6LKT5a-15YuV54mp6Yar6Zmi!5e0!3m2!1szh-TW!2stw!4v1747574622768!5m2!1szh-TW!2stw"
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
+        </div>
+
       </section>
     </main>
   );
