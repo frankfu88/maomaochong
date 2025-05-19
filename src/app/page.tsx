@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import {
   FaPhone,
   FaMapMarkerAlt,
@@ -9,6 +10,7 @@ import {
 } from "react-icons/fa";
 
 export default function Home() {
+  const router = useRouter(); // ✅ 用於導航到獨立頁面
   return (
     <main className="bg-[#E6D6CC] text-gray-900">
       {/* 🔹 關於我們 */}
@@ -108,8 +110,7 @@ export default function Home() {
             "腫瘤外科",
             "產科",
             "健康檢查",
-            "再生醫學",
-            "高壓氧艙治療中心",
+            "再生醫學"
           ].map((service, index) => (
             <div
               key={index}
@@ -118,6 +119,13 @@ export default function Home() {
               <FaPaw className="text-yellow-500 text-2xl" /> {service}
             </div>
           ))}
+          {/* 🔹 諾亞寵物高壓氧 - 可點擊導向 `/oxygen` */}
+          <div
+            onClick={() => router.push("/oxygen")} 
+            className="bg-[#E6D6CC] shadow-md rounded-xl p-6 text-lg flex items-center gap-2 justify-center text-[#5A4032] cursor-pointer hover:bg-[#d5c3b8] transition"
+          >
+            <FaPaw className="text-yellow-500 text-2xl" /> 諾亞寵物高壓氧
+          </div>
         </div>
       </section>
 
@@ -166,7 +174,7 @@ export default function Home() {
         {/* 🔹 Google 地圖嵌入 */}
         <div className="w-full flex justify-center mt-8">
           <iframe
-            title="Google Maps - 文志動物醫院"
+            title="Google Maps - 毛貓寵動物醫院"
             className="w-full max-w-[1100px] h-[450px] rounded-lg shadow-lg border-0"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.638898382683!2d120.64703819999998!3d24.1493164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693dac93728f7b%3A0x977f2d830f2c0c78!2z5q-b6LKT5a-15YuV54mp6Yar6Zmi!5e0!3m2!1szh-TW!2stw!4v1747574622768!5m2!1szh-TW!2stw"
             allowFullScreen
